@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Generator</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>Card Generator</h1>
+      <p>Create, preview, and save digital business cards.</p>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Card details</h2>
+        <form id="card-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+          </div>
+
+          <div class="field">
+            <label for="job-title">Job title</label>
+            <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" required />
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+
+          <div class="field">
+            <label for="social-links">Social profile links</label>
+            <textarea id="social-links" name="socialLinks" rows="3" placeholder="https://linkedin.com/in/you"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="theme">Visual theme</label>
+            <select id="theme" name="theme" required>
+              <option value="midnight">Midnight</option>
+              <option value="sand">Sand</option>
+              <option value="forest">Forest</option>
+            </select>
+          </div>
+
+          <button type="submit" id="save-card">Save card</button>
+        </form>
+      </section>
+
+      <section class="panel preview-panel" aria-labelledby="preview-heading">
+        <h2 id="preview-heading">Preview</h2>
+        <article id="card-preview" class="card-preview" aria-live="polite">
+          <p class="preview-name">Your name</p>
+          <p class="preview-title">Job title</p>
+          <p class="preview-email">email@example.com</p>
+          <p class="preview-social">Social links</p>
+        </article>
+      </section>
+
+      <section class="panel list-panel" aria-labelledby="saved-heading">
+        <h2 id="saved-heading">Saved cards</h2>
+        <ul id="saved-cards" class="saved-cards"></ul>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
