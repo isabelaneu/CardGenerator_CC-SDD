@@ -5,7 +5,7 @@
 Use whichever pattern fits the work breakdown:
 
 ### Major task only
-- [ ] 1. Build the static HTML structure for the Card Generator UI.
+- [x] 1. Build the static HTML structure for the Card Generator UI.
   - Create the form fields, preview panel, saved card list, and main layout shell.
   - _Requirements: 1, 2, 3_
 
