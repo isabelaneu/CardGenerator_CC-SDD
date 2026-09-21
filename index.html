@@ -8,8 +8,12 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>Card Generator</h1>
-      <p>Create, preview, and save digital business cards.</p>
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <div>
+        <p class="eyebrow">YOUR PROFESSIONAL IDENTITY</p>
+        <h1>Card Generator</h1>
+        <p>Create, preview, and save digital business cards.</p>
+      </div>
     </header>
 
     <main class="layout">
@@ -68,11 +72,17 @@
       <section class="panel preview-panel" aria-labelledby="preview-heading">
         <h2 id="preview-heading">Preview</h2>
         <article id="card-preview" class="card-preview theme-midnight layout-classic" aria-live="polite">
+          <div class="card-decoration" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
           <div class="card-content">
+            <p class="preview-label">DIGITAL CARD</p>
             <p class="preview-name">Your name</p>
             <p class="preview-title">Job title</p>
-            <p class="preview-email">email@example.com</p>
-            <p class="preview-social">Social links</p>
+            <div class="preview-details">
+              <p class="preview-email">email@example.com</p>
+              <p class="preview-social">Social links</p>
+            </div>
           </div>
         </article>
         <button type="button" id="export-card" class="secondary-button">Export as image</button>

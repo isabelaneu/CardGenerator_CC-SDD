@@ -86,7 +86,7 @@ function validateField(fieldName, value) {
       .map((entry) => entry.trim())
       .filter(Boolean);
 
-    const invalid = lines.some((entry) => !/^https?:\/\/.test(entry) && !/^[\w.-]+(\.[\w.-]+)+/.test(entry));
+    const invalid = lines.some((entry) => !/^https?:\/\//.test(entry) && !/^[\w.-]+(\.[\w.-]+)+/.test(entry));
 
     return invalid ? 'Use valid social profile URLs or domain names.' : '';
   }
@@ -268,6 +268,7 @@ function handleSubmit(event) {
 
   const cards = readCards();
   const nextCard = createCardObject(values);
+  const wasEditing = Boolean(editingCardId);
 
   if (editingCardId) {
     const index = cards.findIndex((card) => card.id === editingCardId);
@@ -283,9 +284,7 @@ function handleSubmit(event) {
   writeCards(cards);
   renderSavedCards();
   resetForm();
-  if (editingCardId) {
-    setStatus('Card updated successfully.', 'success');
-  }
+  setStatus(wasEditing ? 'Card updated successfully.' : 'Card saved successfully.', 'success');
 }
 
 function handleSavedCardClick(event) {
