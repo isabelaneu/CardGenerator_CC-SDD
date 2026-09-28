@@ -8,32 +8,50 @@
   </head>
   <body>
     <header class="site-header">
-      <h1>Card Generator</h1>
-      <p>Create, preview, and save digital business cards.</p>
+      <div class="brand-mark" aria-hidden="true">✦</div>
+      <div>
+        <p class="eyebrow">YOUR PROFESSIONAL IDENTITY</p>
+        <h1>Card Generator</h1>
+        <p>Create, preview, and save digital business cards.</p>
+      </div>
     </header>
 
     <main class="layout">
       <section class="panel form-panel" aria-labelledby="form-heading">
         <h2 id="form-heading">Card details</h2>
-        <form id="card-form" novalidate>
+        <form id="card-form" novalidate aria-describedby="form-status">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required />
+            <p class="field-error" id="name-error" aria-live="polite"></p>
           </div>
 
           <div class="field">
             <label for="job-title">Job title</label>
             <input id="job-title" name="jobTitle" type="text" autocomplete="organization-title" required />
+            <p class="field-error" id="job-title-error" aria-live="polite"></p>
           </div>
 
           <div class="field">
             <label for="email">Email</label>
             <input id="email" name="email" type="email" autocomplete="email" required />
+            <p class="field-error" id="email-error" aria-live="polite"></p>
           </div>
 
           <div class="field">
             <label for="social-links">Social profile links</label>
             <textarea id="social-links" name="socialLinks" rows="3" placeholder="https://linkedin.com/in/you"></textarea>
+            <p class="field-error" id="social-links-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <label for="layout">Card layout</label>
+            <select id="layout" name="layout" required>
+              <option value="classic">Classic</option>
+              <option value="split">Split</option>
+              <option value="stacked">Stacked</option>
+            </select>
+            <p class="field-error" id="layout-error" aria-live="polite"></p>
           </div>
 
           <div class="field">
@@ -43,20 +61,31 @@
               <option value="sand">Sand</option>
               <option value="forest">Forest</option>
             </select>
+            <p class="field-error" id="theme-error" aria-live="polite"></p>
           </div>
 
-          <button type="submit" id="save-card">Save card</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          <button type="submit" id="save-card" disabled>Save card</button>
         </form>
       </section>
 
       <section class="panel preview-panel" aria-labelledby="preview-heading">
         <h2 id="preview-heading">Preview</h2>
-        <article id="card-preview" class="card-preview" aria-live="polite">
-          <p class="preview-name">Your name</p>
-          <p class="preview-title">Job title</p>
-          <p class="preview-email">email@example.com</p>
-          <p class="preview-social">Social links</p>
+        <article id="card-preview" class="card-preview theme-midnight layout-classic" aria-live="polite">
+          <div class="card-decoration" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="card-content">
+            <p class="preview-label">DIGITAL CARD</p>
+            <p class="preview-name">Your name</p>
+            <p class="preview-title">Job title</p>
+            <div class="preview-details">
+              <p class="preview-email">email@example.com</p>
+              <p class="preview-social">Social links</p>
+            </div>
+          </div>
         </article>
+        <button type="button" id="export-card" class="secondary-button">Export as image</button>
       </section>
 
       <section class="panel list-panel" aria-labelledby="saved-heading">
