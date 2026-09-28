@@ -1,0 +1,117 @@
+metadata:
+  generated: "2026-09-25"
+  source_spec: "card-generator/.kiro/specs/card-generator/spec.md"
+  target_plan: "card-generator/.kiro/specs/card-generator/plan.md"
+
+summary:
+  total_requirements: 14
+  covered_requirements: 14
+  missing_requirements: 0
+  coverage_percentage: 100.0
+
+requirements:
+  - req_id: "REQ-001"
+    req_description: "Hierarquia visual consistente"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "P1 — Interface visual clara"
+      items: ["2.1", "2.3"]
+  - req_id: "REQ-002"
+    req_description: "Paleta em tokens reutilizáveis"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Foundational CSS"
+      items: ["1.1"]
+  - req_id: "REQ-003"
+    req_description: "Contraste mínimo"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Foundational CSS"
+      items: ["1.1", "4.1"]
+  - req_id: "REQ-004"
+    req_description: "Tipografia limpa"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Foundational CSS"
+      items: ["1.1", "3.2"]
+  - req_id: "REQ-005"
+    req_description: "Sombras, bordas e raios leves"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Foundational CSS"
+      items: ["1.1", "2.1", "2.3"]
+  - req_id: "REQ-006"
+    req_description: "Foco visível"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "P1 — Interface visual clara"
+      items: ["2.2", "4.1"]
+  - req_id: "REQ-007"
+    req_description: "Estados interativos distinguíveis"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "P1 — Interface visual clara"
+      items: ["2.2"]
+  - req_id: "REQ-008"
+    req_description: "Responsividade de 320 px a 1440 px"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "P1 — Responsividade e acessibilidade visual"
+      items: ["3.1"]
+  - req_id: "REQ-009"
+    req_description: "Layout de uma coluna e áreas de toque mobile"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "P1 — Responsividade e acessibilidade visual"
+      items: ["3.1", "4.1"]
+  - req_id: "REQ-010"
+    req_description: "Reorganização em viewports intermediárias"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "P1 — Responsividade e acessibilidade visual"
+      items: ["3.1"]
+  - req_id: "REQ-011"
+    req_description: "Legibilidade e quebra de conteúdo"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "P1 — Interface visual clara"
+      items: ["2.3", "3.2"]
+  - req_id: "REQ-012"
+    req_description: "Movimento reduzido"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "P1 — Responsividade e acessibilidade visual"
+      items: ["3.2"]
+  - req_id: "REQ-013"
+    req_description: "Fallback tipográfico"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "P1 — Responsividade e acessibilidade visual"
+      items: ["3.2"]
+  - req_id: "REQ-014"
+    req_description: "Verificação estrutural e por viewport"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-4"
+      phase_name: "Polish and Cross-Cutting Validation"
+      items: ["2.2", "4.1"]
+
+missing_requirements: []
+orphan_plan_items: []
+validation:
+  passed: true
+  errors: []
+  warnings: []

@@ -1,0 +1,91 @@
+metadata:
+  generated: "2026-09-25"
+  source_plan: "card-generator/.kiro/specs/card-generator/plan.md"
+  target_tasks: "card-generator/.kiro/specs/card-generator/plan.md"
+
+summary:
+  total_plan_items: 7
+  covered_plan_items: 7
+  missing_plan_items: 0
+  coverage_percentage: 100.0
+  total_tasks_generated: 8
+  orphan_tasks: 0
+
+phases:
+  - phase_id: "Phase-1"
+    phase_name: "Foundational CSS"
+    items:
+      - item_id: "1.1"
+        description: "Consolidar tokens e fundação visual"
+        tasks: ["T001"]
+        notes: ""
+  - phase_id: "Phase-2"
+    phase_name: "P1 — Interface visual clara"
+    items:
+      - item_id: "2.1"
+        description: "Refinar cabeçalho, painéis e espaçamento"
+        tasks: ["T002"]
+        notes: ""
+      - item_id: "2.2"
+        description: "Melhorar campos, botões e estados interativos"
+        tasks: ["T003"]
+        notes: ""
+      - item_id: "2.3"
+        description: "Reequilibrar layout da pré-visualização e cartões salvos"
+        tasks: ["T004"]
+        notes: ""
+  - phase_id: "Phase-3"
+    phase_name: "P1 — Responsividade e acessibilidade visual"
+    items:
+      - item_id: "3.1"
+        description: "Aplicar responsividade por viewport"
+        tasks: ["T005"]
+        notes: ""
+      - item_id: "3.2"
+        description: "Tratar conteúdo longo, fallback e movimento reduzido"
+        tasks: ["T006"]
+        notes: ""
+  - phase_id: "Phase-4"
+    phase_name: "Polish and Cross-Cutting Validation"
+    items:
+      - item_id: "4.1"
+        description: "Validar visualmente e estruturalmente"
+        tasks: ["T007", "T008"]
+        notes: ""
+
+missing_plan_items: []
+orphan_tasks: []
+upstream_trace:
+  - plan_item: "1.1"
+    source_requirements: ["REQ-002", "REQ-003", "REQ-004", "REQ-005"]
+    tasks: ["T001"]
+    full_trace: "REQ-002,REQ-003,REQ-004,REQ-005 → Phase-1.1 → T001"
+  - plan_item: "2.1"
+    source_requirements: ["REQ-001", "REQ-005"]
+    tasks: ["T002"]
+    full_trace: "REQ-001,REQ-005 → Phase-2.1 → T002"
+  - plan_item: "2.2"
+    source_requirements: ["REQ-006", "REQ-007", "REQ-014"]
+    tasks: ["T003"]
+    full_trace: "REQ-006,REQ-007,REQ-014 → Phase-2.2 → T003"
+  - plan_item: "2.3"
+    source_requirements: ["REQ-001", "REQ-005", "REQ-011"]
+    tasks: ["T004"]
+    full_trace: "REQ-001,REQ-005,REQ-011 → Phase-2.3 → T004"
+  - plan_item: "3.1"
+    source_requirements: ["REQ-008", "REQ-009", "REQ-010"]
+    tasks: ["T005"]
+    full_trace: "REQ-008,REQ-009,REQ-010 → Phase-3.1 → T005"
+  - plan_item: "3.2"
+    source_requirements: ["REQ-004", "REQ-011", "REQ-012", "REQ-013"]
+    tasks: ["T006"]
+    full_trace: "REQ-004,REQ-011,REQ-012,REQ-013 → Phase-3.2 → T006"
+  - plan_item: "4.1"
+    source_requirements: ["REQ-003", "REQ-006", "REQ-008", "REQ-014"]
+    tasks: ["T007", "T008"]
+    full_trace: "REQ-003,REQ-006,REQ-008,REQ-014 → Phase-4.1 → T007,T008"
+
+validation:
+  passed: true
+  errors: []
+  warnings: []
